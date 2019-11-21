@@ -1,0 +1,33 @@
+终端启动Celery服务
+celery -A celery_tasks.main worker -l info
+
+
+数据迁移
+python manage.py makemigrations
+python manage.py migrate
+
+
+FastDFS----tracker/storage
+sudo docker run -dti --name storage --network=host -e TRACKER_SERVER=172.17.0.1:22122 -v /var/fdfs/storage:/var/fdfs delron/fastdfs storage
+sudo docker images
+sudo docker container ls -a
+sudo docker container start 94c7e733a3c5
+http://172.16.211.129:8888/group1/M00/00/00/CtM3BVnihx-AKdf0AAPWWMjR7sE771.jpg
+
+MySQL主从同步
+主
+sudo service mysql restart
+# 1. 收集主机原有数据
+mysqldump -uroot -pmysql --all-databases --lock-all-tables > ~/master_db.sql
+# 2. 从机复制主机原有数据
+mysql -uroot -pmysql -h127.0.0.1 --port=8306 < ~/master_db.sql
+
+从
+sudo docker container start mysql-slave
+
+# 开启测试静态服务器
+python -m http.server 8080 --bind 127.0.0.1
+
+
+
+

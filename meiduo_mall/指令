@@ -28,6 +28,9 @@ sudo docker container start mysql-slave
 # 开启测试静态服务器
 python -m http.server 8080 --bind 127.0.0.1
 
+# 创建mysql超级用户
+python manage.py createsuperuser
+root-----mysqlmysql
 
 
 

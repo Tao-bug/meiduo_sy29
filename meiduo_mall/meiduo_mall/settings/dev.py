@@ -47,11 +47,16 @@ INSTALLED_APPS = [
     'apps.carts',
     'apps.orders',
     'apps.payment',
+    'apps.meiduo_admin',
+    'rest_framework',
+    'corsheaders',
 
     'django_crontab',  # 定时任务
 ]
 
 MIDDLEWARE = [
+    # 跨域必须为第一
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -332,3 +337,11 @@ CRONJOBS = [
 # 在定时任务中，如果出现非英文字符，会出现字符异常错误
 CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'
 
+# CORS 添加白名单
+CORS_ORIGIN_WHITELIST = (
+    'http://127.0.0.1:8080',
+    'http://localhost:8080',
+    'http://www.meiduo.site:8080',
+    'http://api.meiduo.site:8000',
+)
+CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie

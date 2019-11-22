@@ -37,4 +37,8 @@ urlpatterns = [
     # 9.支付宝
     url(r'^', include('apps.payment.urls')),
 
+
+    # 后台
+    url(r'^meiduo_admin/', include('apps.meiduo_admin.urls')),
+
 ]

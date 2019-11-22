@@ -32,5 +32,7 @@ python -m http.server 8080 --bind 127.0.0.1
 python manage.py createsuperuser
 root-----mysqlmysql
 
+# 运行后台服务
+npm run dev
 
 

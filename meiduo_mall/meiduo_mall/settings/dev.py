@@ -292,7 +292,10 @@ logger = logging.getLogger('django')
 AUTH_USER_MODEL = 'users.User'
 
 # 配置自定义用户认证后端
-AUTHENTICATION_BACKENDS = ['apps.users.utils.UsernameMobileAuthBackend']
+AUTHENTICATION_BACKENDS = [
+    'apps.users.utils.UsernameMobileAuthBackend',
+    'apps.meiduo_admin.utils.authenticate.MeiduoModelBackend',
+]
 
 # 重定向登陆路由
 LOGIN_URL = '/login/'
@@ -346,7 +349,7 @@ CORS_ORIGIN_WHITELIST = (
 )
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 
-
+# drf配置　
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (  # 身份验证的方式
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',  # jwt
@@ -358,5 +361,11 @@ REST_FRAMEWORK = {
 # jwt 配置
 import datetime
 JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+    # 常用时间２周
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(weeks=2),
+    # 自定义响应体载体
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'apps.meiduo_admin.views.admin.meiduo_response_payload_handler',
+    # 'JWT_RESPONSE_PAYLOAD_HANDLER': 'apps.users.utils.meiduo_response_payload_handler',  # 已更改
+    'JWT_PAYLOAD_HANDLER': 'apps.meiduo_admin.views.admin.meiduo_payload_handler',
+
 }

@@ -489,7 +489,7 @@ class LoginView(View):
             return HttpResponseForbidden('请输入8-20位的密码')
 
         # 验证用户名和密码--django自带的认证
-        user = authenticate(username=username, password=password)
+        user = authenticate(request, username=username, password=password)
         if user is None:
             return render(request, 'login.html', {'account_errmsg': '用户名或密码错误'})
         # 4.保持登录状态

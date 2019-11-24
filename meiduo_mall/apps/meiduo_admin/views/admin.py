@@ -5,6 +5,8 @@ from rest_framework.response import Response
 from apps.users.models import User
 import jwt
 from datetime import datetime, timedelta
+from apps.meiduo_admin.Mixin import TokenValidateMixin
+from rest_framework_jwt.utils import jwt_payload_handler
 
 
 class LoginView(APIView):
@@ -36,3 +38,38 @@ class LoginView(APIView):
             "token": token
         })
 
+
+class TestView(TokenValidateMixin, APIView):
+    def get(self, request):
+        # 验证　封装
+        # token = request.META.get('HTTP_AUTHORIZATION')[4:]
+        # try:
+        #     payload = jwt.decode(token, settings.SECRET_KEY)
+        # except:
+        #     pass
+
+        return Response({'msg': 'ok'})
+
+
+# jwt --- token  自定义响应体
+def meiduo_response_payload_handler(token, user=None, request=None):
+    """
+    自定义jwt认证成功返回数据
+    """
+    return {
+        'token': token,
+        'id': user.id,
+        'username': user.username
+    }
+
+
+# 自定义载荷
+def meiduo_payload_handler(user):
+    payload = jwt_payload_handler(user)
+    # 去掉email
+    del payload['email']
+
+    # 增加mobile
+    payload['mobile'] = user.mobile
+
+    return payload

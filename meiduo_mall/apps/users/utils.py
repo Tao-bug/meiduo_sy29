@@ -7,6 +7,18 @@ from utils.secret import SecretOauth
 from .models import User
 
 
+# # jwt --- token---->写到meiduo_admin.views
+# def meiduo_response_payload_handler(token, user=None, request=None):
+#     """
+#     自定义jwt认证成功返回数据
+#     """
+#     return {
+#         'token': token,
+#         'id': user.id,
+#         'username': user.username
+#     }
+
+
 # 验证token并提取user
 def check_verify_email_token(token):
     """
@@ -64,6 +76,7 @@ def get_user_by_account(account):
         return user
 
 
+# 自定义用户认证后端
 class UsernameMobileAuthBackend(ModelBackend):
     """自定义用户认证后端"""
 
@@ -76,8 +89,24 @@ class UsernameMobileAuthBackend(ModelBackend):
         :param kwargs: 其他参数
         :return: user
         """
-        # 根据传入的username获取user对象。username可以是手机号也可以是账号
-        user = get_user_by_account(username)
-        # 校验user是否存在并校验密码是否正确
-        if user and user.check_password(password):
-            return user
+        # 判断前台登录还是后台登录
+        # if 'meiduo_admin' in request.path:  # 没传request--不能直接用
+        if request is None:
+            # 后台
+            try:
+                # 加入管理员条件
+                user = User.objects.get(username=username, is_staff=True)
+            except:
+                return None
+            if user.check_password(password):
+                return user
+            else:
+                return None
+
+        else:
+            # 前台
+            # 根据传入的username获取user对象。username可以是手机号也可以是账号
+            user = get_user_by_account(username)
+            # 校验user是否存在并校验密码是否正确
+            if user and user.check_password(password):
+                return user

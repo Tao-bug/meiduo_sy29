@@ -12,6 +12,11 @@ urlpatterns = [
     url(r'^authorizations/$', obtain_jwt_token),
     # 统计总数
     url(r'^statistical/total_count/$', statistical.TotalView.as_view()),
-
+    # 统计今天注册人数
+    url(r'^statistical/day_increment/$', statistical.TodayView.as_view()),
+    # # 日活跃用户统计
+    url(r'^statistical/day_active/$', statistical.ActiveView.as_view()),
+    # 日下单用户量统计
+    url(r'^statistical/day_orders/$', statistical.OrderView.as_view()),
 
 ]

@@ -33,6 +33,7 @@ python manage.py createsuperuser
 root-----mysqlmysql
 
 # 运行后台服务
+meiduo_mall_admin/
 npm run dev
 
 

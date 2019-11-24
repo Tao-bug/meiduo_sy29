@@ -3,6 +3,7 @@ import re
 from apps.users.models import User
 
 
+# users.utils 已增加此功能
 class MeiduoModelBackend(ModelBackend):
     def authenticate(self, request, username=None, password=None, **kwargs):
         # 判断是否通过vue组件发送请求

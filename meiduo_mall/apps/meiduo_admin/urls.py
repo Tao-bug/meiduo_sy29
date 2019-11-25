@@ -30,6 +30,8 @@ urlpatterns = [
     url(r'^goods/simple/$', spu.SpuSimpleView.as_view()),
     # sku-第三级分类
     url(r'^skus/categories/$', category.Category3View.as_view()),
+    # 根据spu查询spec的路由goods/1/specs/
+    url(r'^goods/(?P<spu_id>\d+)/specs/$', spec.SpecBySpuView.as_view()),
 
 ]
 

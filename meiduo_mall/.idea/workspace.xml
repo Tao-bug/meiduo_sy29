@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75046370-b109-49fc-8a52-7bf24967fbb7" name="Default" comment="商品规格管理&#10;前端--规格---》 SPU">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/meiduo_admin/serializers/categories.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/meiduo_admin/serializers/sku.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/meiduo_admin/serializers/spu.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/categories.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/sku.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/spu.py" />
+    <list default="true" id="75046370-b109-49fc-8a52-7bf24967fbb7" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/apps/meiduo_admin/serializers/categories.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/serializers/category.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/apps/meiduo_admin/views/categories.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/category.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/goods/models.py" afterPath="$PROJECT_DIR$/apps/goods/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/urls.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/views/spec.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/spec.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/views/user.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/user.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,11 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="38" column="57" lean-forward="true" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+            <state relative-caret-position="231">
+              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -66,25 +61,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sku.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/sku.py">
+      <file leaf-file-name="category.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/category.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="63">
+              <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sku.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/sku.py">
+      <file leaf-file-name="category.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/category.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,9 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/user_center_info.html" />
-        <option value="$PROJECT_DIR$/apps/carts/urls.py" />
-        <option value="$PROJECT_DIR$/templates/place_order.html" />
         <option value="$PROJECT_DIR$/templates/order_success.html" />
         <option value="$PROJECT_DIR$/apps/payment/keys/app_public_key.pem" />
         <option value="$PROJECT_DIR$/apps/payment/models.py" />
@@ -161,8 +151,11 @@
         <option value="$PROJECT_DIR$/apps/meiduo_admin/serializers/categories.py" />
         <option value="$PROJECT_DIR$/apps/meiduo_admin/views/categories.py" />
         <option value="$PROJECT_DIR$/apps/meiduo_admin/serializers/sku.py" />
-        <option value="$PROJECT_DIR$/apps/meiduo_admin/urls.py" />
         <option value="$PROJECT_DIR$/apps/meiduo_admin/views/sku.py" />
+        <option value="$PROJECT_DIR$/apps/goods/models.py" />
+        <option value="$PROJECT_DIR$/apps/meiduo_admin/views/category.py" />
+        <option value="$PROJECT_DIR$/apps/meiduo_admin/serializers/category.py" />
+        <option value="$PROJECT_DIR$/apps/meiduo_admin/urls.py" />
       </list>
     </option>
   </component>
@@ -652,13 +645,6 @@
       <option name="presentableId" value="Default" />
       <updated>1572486619833</updated>
     </task>
-    <task id="LOCAL-00027" summary="关联查询&#10;">
-      <created>1573047034104</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1573047034104</updated>
-    </task>
     <task id="LOCAL-00028" summary="用户地址模型类&#10;补充用户模型默认地址字段&#10;数据迁移">
       <created>1573087550567</created>
       <option name="number" value="00028" />
@@ -995,7 +981,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574653148345</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="SKU表管理--sku-查询、过滤、分页">
+      <created>1574676415583</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1574676415583</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1068,7 +1061,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="展示购物车后端逻辑实现&#10;查询Redis购物车&#10;查询Redis购物车&#10;" />
     <MESSAGE value="在购物车页面修改购物车使用局部刷新的效果。" />
     <MESSAGE value="在购物车页面 删除 购物车使用局部刷新的效果。" />
     <MESSAGE value="在购物车页面修改购物车使用局部刷新的效果。&#10;全选购物车" />
@@ -1093,7 +1085,8 @@
     <MESSAGE value="月增用户统计&#10;日分类商品访问量&#10;序列化" />
     <MESSAGE value="用户分页" />
     <MESSAGE value="商品规格管理&#10;前端--规格---》 SPU" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品规格管理&#10;前端--规格---》 SPU" />
+    <MESSAGE value="SKU表管理--sku-查询、过滤、分页" />
+    <option name="LAST_COMMIT_MESSAGE" value="SKU表管理--sku-查询、过滤、分页" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1250,14 +1243,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/goods/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="167" column="10" lean-forward="false" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1530,14 +1515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/categories.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/指令">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -1546,23 +1523,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/categories.py">
+    <entry file="file://$PROJECT_DIR$/apps/goods/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="38" column="57" lean-forward="true" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1578,10 +1543,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/sku.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="97">
           <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/category.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/category.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

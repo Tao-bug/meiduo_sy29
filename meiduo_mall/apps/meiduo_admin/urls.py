@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
-from .views import statistical, user, spec, spu, sku
+from .views import statistical, user, spec, spu, sku, category
 from rest_framework.routers import SimpleRouter
 from .views import admin
 
@@ -28,7 +28,8 @@ urlpatterns = [
     url(r'^users/$', user.UserView.as_view()),
     # spu
     url(r'^goods/simple/$', spu.SpuSimpleView.as_view()),
-
+    # sku-第三级分类
+    url(r'^skus/categories/$', category.Category3View.as_view()),
 
 ]
 

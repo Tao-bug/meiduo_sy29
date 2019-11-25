@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
-from .views import statistical,user
+from .views import statistical, user, spec
+from rest_framework.routers import SimpleRouter
 from .views import admin
 
 urlpatterns = [
@@ -27,3 +28,8 @@ urlpatterns = [
     url(r'^users/$', user.UserView.as_view()),
 
 ]
+
+router = SimpleRouter()
+# 为规格spec注册路由
+router.register('goods/specs', spec.SpecViewSet, base_name='specs')
+urlpatterns += router.urls

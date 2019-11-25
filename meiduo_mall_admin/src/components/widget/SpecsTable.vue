@@ -1,5 +1,5 @@
 <template>
-<div class="auther_table_wrap"> 
+<div class="auther_table_wrap">
   <el-table
       :data="specs"
       border
@@ -39,8 +39,8 @@
         <el-form :model="specsForm" status-icon :rules="rulesSpecsForm" ref="specsForm" label-width="100px">
           <el-form-item label="规格名称：" prop="name">
             <el-input type="text" v-model="specsForm.name" autocomplete="off" size="small"></el-input>
-          </el-form-item>          
-          <el-form-item label="规格：" prop="spu_id">
+          </el-form-item>
+          <el-form-item label="SPU：" prop="spu_id">
             <el-select v-model="specsForm.spu_id" size="small">
               <el-option
                 v-for="item in goods_list"
@@ -70,10 +70,10 @@ export default {
     var validateName = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('规格名不能为空'));
-        } else {         
-          callback()          
+        } else {
+          callback()
         }
-    }; 
+    };
     return {
       pop_show:false,
       edit_id:'',
@@ -114,15 +114,15 @@ export default {
             headers: {
               'Authorization': 'JWT ' + token
             },
-            responseType: 'json'           
+            responseType: 'json'
         }).then(dat=>{
           this.$message({
             type: 'success',
             message: '修改规格成功!'
-          }); 
+          });
         	this.pop_show = false;
-          this.$emit('fnResetTable');           
-          this.resetForm('specsForm');          
+          this.$emit('fnResetTable');
+          this.resetForm('specsForm');
         }).catch(err=>{
         	console.log(err.response);
         })
@@ -138,7 +138,7 @@ export default {
               headers: {
                 'Authorization': 'JWT ' + token
               },
-              responseType:'json'           
+              responseType:'json'
           }).then(dat=>{
             this.$message({
               type: 'success',
@@ -157,8 +157,8 @@ export default {
           this.$message({
             type: 'info',
             message: '已取消删除'
-          });          
-        });  		
+          });
+        });
   	},
     fnGetGoods(){
       this.axios.get(cons.apis + '/goods/simple/', {
@@ -168,8 +168,8 @@ export default {
         responseType: 'json',
       })
       .then(dat=>{
-          this.goods_list = dat.data;        
-      }).catch(err=>{      
+          this.goods_list = dat.data;
+      }).catch(err=>{
          console.log(err.response);
       });
     },

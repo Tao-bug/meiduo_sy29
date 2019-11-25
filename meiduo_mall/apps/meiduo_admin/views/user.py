@@ -15,6 +15,7 @@ class UserView(ListCreateAPIView):
         # 判断  如果有参数，则拼接
         if keyword:
             queryset = queryset.filter(username__contains=keyword)
+
         # 返回查询
         return queryset
 

@@ -6,6 +6,6 @@ from apps.meiduo_admin.utils.meiduo_pagination import MeiduoPagination
 
 # 商品规格管理
 class SpecViewSet(ModelViewSet):
-    queryset = SPUSpecification.objects.all()
+    queryset = SPUSpecification.objects.all().order_by('-id')
     serializer_class = SpecSerializer
     pagination_class = MeiduoPagination

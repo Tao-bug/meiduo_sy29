@@ -1,6 +1,7 @@
 from django.db.models import Q
 from rest_framework.viewsets import ModelViewSet
-from apps.meiduo_admin.serializers.sku import SkuSerializer
+from rest_framework.generics import ListAPIView
+from apps.meiduo_admin.serializers.sku import SkuSerializer, SkuSimpleSerializer
 from apps.meiduo_admin.utils.meiduo_pagination import MeiduoPagination
 from apps.goods.models import SKU
 
@@ -24,3 +25,10 @@ class SkuViewSet(ModelViewSet):
         return queryset
     serializer_class = SkuSerializer
     pagination_class = MeiduoPagination
+
+
+# 图片-查询sku简单数据
+class SkuSimpleView(ListAPIView):
+    queryset = SKU.objects.all()
+    serializer_class = SkuSimpleSerializer
+

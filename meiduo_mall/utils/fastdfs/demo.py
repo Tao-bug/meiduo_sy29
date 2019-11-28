@@ -28,6 +28,14 @@ if __name__ == '__main__':
     client = Fdfs_client('client.conf')
     # 3. 调用FastDFS客户端上传文件方法
     result = client.upload_by_filename('/home/python/Desktop/tupian/xjj1.jpg')
+
+    # {'Uploaded size': '45.00KB',
+    # 'Status': 'Upload successed.',
+    # 'Local file name': '/home/python/Desktop/tupian/xjj1.jpg',
+    # 'Remote file_id': 'group1/M00/00/02/rBDTgV3eczCAeiqkAAC1UzVhw7w025.jpg',
+    # 'Storage IP': '172.16.211.129',
+    # 'Group name': 'group1'}
+
     # 运行这条代码的电脑上，内有指定文件，但是能获得指定文件的二进制数据
     # client.upload_by_buffer()
     print(result)

@@ -12,7 +12,6 @@ sudo docker run -dti --name storage --network=host -e TRACKER_SERVER=172.17.0.1:
 sudo docker images
 sudo docker container ls -a
 sudo docker container start 94c7e733a3c5
-http://172.16.211.129:8888/group1/M00/00/00/CtM3BVnihx-AKdf0AAPWWMjR7sE771.jpg
 
 MySQL主从同步
 主
@@ -28,12 +27,17 @@ sudo docker container start mysql-slave
 # 开启测试静态服务器
 python -m http.server 8080 --bind 127.0.0.1
 
-# 创建mysql超级用户
+# 创建mysql超级用户git push origin heima
+
 python manage.py createsuperuser
 root-----mysqlmysql
 
 # 运行后台服务
 meiduo_mall_admin/
 npm run dev
+
+
+# 推送
+git push origin heima
 
 

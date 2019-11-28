@@ -82,3 +82,9 @@ class SkuSerializer(serializers.ModelSerializer):
                 task_generate.delay(instance.id)
 
         return instance
+
+
+# 图片-查询sku简单数据
+class SkuSimpleSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    name = serializers.CharField()

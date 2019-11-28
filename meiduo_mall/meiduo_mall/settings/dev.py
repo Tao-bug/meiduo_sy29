@@ -328,6 +328,9 @@ DEFAULT_FILE_STORAGE = 'utils.fastdfs.fastdfs_storage.FastDFSStorage'
 # FastDFS相关参数
 # FDFS_BASE_URL = 'http://172.16.211.129:8888/'
 FDFS_BASE_URL = 'http://image.meiduo.site:8888/'
+# 上传图片的配置文件
+FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')
+
 
 # 支付宝SDK配置参数
 ALIPAY_APPID = '2016101400686577'  # 写自己的appid

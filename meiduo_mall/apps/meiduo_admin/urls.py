@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
-from .views import statistical, user, spec, spu, sku, category
+from .views import statistical, user, spec, spu, sku, category, images
 from rest_framework.routers import SimpleRouter
 from .views import admin
 
@@ -32,12 +32,19 @@ urlpatterns = [
     url(r'^skus/categories/$', category.Category3View.as_view()),
     # 根据spu查询spec的路由goods/1/specs/
     url(r'^goods/(?P<spu_id>\d+)/specs/$', spec.SpecBySpuView.as_view()),
+    # 查询所有的sku，返回简单数据，用于添加商品图片时的选择
+    url('^skus/simple/$', sku.SkuSimpleView.as_view()),
 
 ]
 
 router = SimpleRouter()
 # 为规格spec注册路由
 router.register('goods/specs', spec.SpecViewSet, base_name='specs')
+
+# 为sku图片注册
+# 注意：必须写在skus路由规则的上面
+router.register('skus/images', images.ImageViewSet, base_name='images')
+
 # 为sku注册
 router.register('skus', sku.SkuViewSet, base_name='skus')
 urlpatterns += router.urls

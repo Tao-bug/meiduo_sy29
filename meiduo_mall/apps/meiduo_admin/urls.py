@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
-from .views import statistical, user, spec, spu, sku, category, images, orders
+from .views import statistical, user, spec, spu, sku, category, images, orders, permission
 from rest_framework.routers import SimpleRouter
 from .views import admin
 
@@ -36,6 +36,8 @@ urlpatterns = [
     url('^skus/simple/$', sku.SkuSimpleView.as_view()),
     # 为订单修改状态的方法配置路由规则
     # url('^orders/(?P<pk>\d+)/status/$',orders.OrderViewSet.as_view({'put':'status'})),
+    # 权限
+    url('^permission/perms/$', permission.PermissionView.as_view()),
 
 ]
 

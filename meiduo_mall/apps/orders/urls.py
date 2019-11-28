@@ -22,4 +22,5 @@ urlpatterns = [
     # 详情页展示评价信息  comments/(?P<sku_id>\d+)/
     url(r'^comments/(?P<sku_id>\d+)/$', views.OrderCommentInfoView.as_view()),
 
+
 ]

@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
-from .views import statistical, user, spec, spu, sku, category, images, orders, permission
+from .views import statistical, user, spec, spu, sku, category, images, orders, permission, groups
 from rest_framework.routers import SimpleRouter
 from .views import admin
 
@@ -54,4 +54,7 @@ router.register('skus', sku.SkuViewSet, base_name='skus')
 
 # 订单
 router.register('orders', orders.OrderViewSet, base_name='orders')
+
+# 组
+router.register('permission/groups', groups.GroupViewSet, base_name='groups')
 urlpatterns += router.urls

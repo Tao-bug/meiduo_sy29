@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="75046370-b109-49fc-8a52-7bf24967fbb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/serializers/orders.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/serializers/orders.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/views/orders.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/orders.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +51,8 @@
       <file leaf-file-name="orders.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/orders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state relative-caret-position="161">
+              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -74,10 +75,10 @@
       <file leaf-file-name="orders.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/orders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="296">
+              <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -713,13 +714,6 @@
       <option name="presentableId" value="Default" />
       <updated>1572486619833</updated>
     </task>
-    <task id="LOCAL-00034" summary="查询首页商品广告">
-      <created>1573123394865</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1573123394865</updated>
-    </task>
     <task id="LOCAL-00035" summary="FastDFS客户端demo实现文件存储">
       <created>1573128522767</created>
       <option name="number" value="00035" />
@@ -1056,7 +1050,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574913354116</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="订单－查询--修改">
+      <created>1574914050705</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1574914050705</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1129,7 +1130,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="# 结算订单页面显示" />
     <MESSAGE value="使用事务保存订单数据&#10;使用乐观锁并发下单" />
     <MESSAGE value="对接支付宝系统&#10;订单支付功能" />
     <MESSAGE value="保存订单支付结果" />
@@ -1154,7 +1154,8 @@
     <MESSAGE value="图片-查询多条&#10;-查询sku简单数据&#10;-创建" />
     <MESSAGE value="图片-删除" />
     <MESSAGE value="订单－查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单－查询" />
+    <MESSAGE value="订单－查询--修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="订单－查询--修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1568,16 +1569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/orders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -1588,10 +1579,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/orders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/orders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state relative-caret-position="161">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>

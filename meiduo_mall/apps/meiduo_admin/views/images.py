@@ -37,3 +37,44 @@ class ImageViewSet(ModelViewSet):
             'sku': instance.sku_id,
             'image': instance.image.url
         })
+
+    # 重写修改方法，原因：默认代码中只侯对象，不包含图片修改
+    def update(self, request, *args, **kwargs):
+        instance = SKUImage.objects.get(pk=self.kwargs.get('pk'))
+        # 接受
+        sku_id = request.data.get('sku')
+        image_file = request.data.get('image')
+
+        # 校验
+        if not all([sku_id, image_file]):
+            raise serializers.ValidationError('数据不完整')
+
+        # 处理图片
+        client = Fdfs_client(settings.FDFS_CLIENT_CONF)
+        # 删除原有图片
+        client.delete_file(instance.image.name)
+        # 添加新图片
+        result = client.upload_by_buffer(image_file.read())
+        image_name = result.get('Remote file_id')
+
+        # 修改模型类对象
+        instance.sku_id = sku_id
+        instance.image = image_name
+        instance.save()
+
+        # 响应
+        return Response({
+            'id': instance.id,
+            'sku': instance.sku_id,
+            'image': instance.image.url
+        })
+
+    def destroy(self, request, *args, **kwargs):
+        instance = SKUImage.objects.get(pk=self.kwargs.get('pk'))
+
+        # 删除fastdfs中的图片
+        client = Fdfs_client(settings.FDFS_CLIENT_CONF)
+        client.delete_file(instance.image.name)
+
+        instance.delete()
+        return Response(status=204)

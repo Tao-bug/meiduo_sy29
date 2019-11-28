@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75046370-b109-49fc-8a52-7bf24967fbb7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/meiduo_admin/serializers/images.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/images.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/serializers/sku.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/serializers/sku.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/urls.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/views/sku.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/sku.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/settings/dev.py" afterPath="$PROJECT_DIR$/meiduo_mall/settings/dev.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/fastdfs/demo.py" afterPath="$PROJECT_DIR$/utils/fastdfs/demo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/指令" afterPath="$PROJECT_DIR$/指令" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/views/images.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/images.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,10 +74,11 @@
       <file leaf-file-name="images.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/images.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+            <state relative-caret-position="166">
+              <caret line="60" column="32" lean-forward="true" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
+                <element signature="e#653#1319#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -765,13 +759,6 @@
       <option name="presentableId" value="Default" />
       <updated>1572486619833</updated>
     </task>
-    <task id="LOCAL-00031" summary="&#10;   1. 确认代码不报错&#10;   2. 粘贴--apps/contents/models.py --两个 广告类&#10;   3. 创建 goods应用 ---注册app---models.py--10个类&#10;   4. 数据迁移">
-      <created>1573103747442</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1573103747442</updated>
-    </task>
     <task id="LOCAL-00032" summary="SQL脚本录入商品数据">
       <created>1573106041216</created>
       <option name="number" value="00032" />
@@ -1108,7 +1095,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574835542203</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="图片-查询多条&#10;-查询sku简单数据&#10;-创建">
+      <created>1574903709323</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1574903709324</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1121,7 +1115,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23019986" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28611112" sideWeight="0.49592894" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28611112" sideWeight="0.49592894" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10880829" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30972221" sideWeight="0.49370837" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24796447" sideWeight="0.50980395" order="2" side_tool="true" content_ui="tabs" />
@@ -1181,7 +1175,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="合并购物车&#10;登录后合并cookie购物车数据到Redis&#10;    :param request: 本次请求对象，获取cookie中的数据&#10;    :param response: 本次响应对象，清除cookie中的数据" />
     <MESSAGE value="订单模型类迁移建表" />
     <MESSAGE value="结算订单是从Redis购物车中查询出被勾选的商品信息进行结算并展示。" />
     <MESSAGE value="# 结算订单页面显示" />
@@ -1206,7 +1199,8 @@
     <MESSAGE value="SKU表管理--sku-查询第三级分类" />
     <MESSAGE value="SKU表管理--sku-根据spu_id查询规格及选项" />
     <MESSAGE value="SKU表管理--sku-创建－－修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="SKU表管理--sku-创建－－修改" />
+    <MESSAGE value="图片-查询多条&#10;-查询sku简单数据&#10;-创建" />
+    <option name="LAST_COMMIT_MESSAGE" value="图片-查询多条&#10;-查询sku简单数据&#10;-创建" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1636,10 +1630,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/images.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        <state relative-caret-position="166">
+          <caret line="60" column="32" lean-forward="true" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#653#1319#0" expanded="false" />
           </folding>
         </state>
       </provider>

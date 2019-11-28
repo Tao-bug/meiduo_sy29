@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75046370-b109-49fc-8a52-7bf24967fbb7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/meiduo_admin/serializers/admin.py" />
+    <list default="true" id="75046370-b109-49fc-8a52-7bf24967fbb7" name="Default" comment="组-获取管理员用户列表数据">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/urls.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/views/admin.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/meiduo_admin/views/groups.py" afterPath="$PROJECT_DIR$/apps/meiduo_admin/views/groups.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,8 +50,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+            <state relative-caret-position="254">
+              <caret line="60" column="49" lean-forward="false" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -61,31 +59,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/admin.py">
+      <file leaf-file-name="groups.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/groups.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="68" column="7" lean-forward="true" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+            <state relative-caret-position="231">
+              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
-                <element signature="e#571#1340#0" expanded="false" />
-                <element signature="e#604#1340#0" expanded="false" />
-                <element signature="e#1392#1650#0" expanded="false" />
-                <element signature="e#1424#1647#0" expanded="false" />
-                <element signature="e#1747#1877#0" expanded="false" />
-                <element signature="e#1926#2072#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,12 +138,12 @@
         <option value="$PROJECT_DIR$/apps/meiduo_admin/views/perission.py" />
         <option value="$PROJECT_DIR$/apps/orders/urls.py" />
         <option value="$PROJECT_DIR$/apps/meiduo_admin/serializers/groups.py" />
-        <option value="$PROJECT_DIR$/apps/meiduo_admin/views/groups.py" />
         <option value="$PROJECT_DIR$/apps/meiduo_admin/serializers/permission.py" />
         <option value="$PROJECT_DIR$/apps/meiduo_admin/views/permission.py" />
         <option value="$PROJECT_DIR$/apps/meiduo_admin/serializers/admin.py" />
         <option value="$PROJECT_DIR$/apps/meiduo_admin/urls.py" />
         <option value="$PROJECT_DIR$/apps/meiduo_admin/views/admin.py" />
+        <option value="$PROJECT_DIR$/apps/meiduo_admin/views/groups.py" />
       </list>
     </option>
   </component>
@@ -691,13 +671,6 @@
       <option name="presentableId" value="Default" />
       <updated>1572486619833</updated>
     </task>
-    <task id="LOCAL-00040" summary="查询列表页分页和排序数据">
-      <created>1573272786485</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1573272786485</updated>
-    </task>
     <task id="LOCAL-00041" summary="商品详情页&#10;查询SKU规格信息">
       <created>1573298704581</created>
       <option name="number" value="00041" />
@@ -1034,7 +1007,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574931589053</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="组-获取管理员用户列表数据">
+      <created>1574932464553</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1574932464553</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1107,7 +1087,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="完成忘记密码" />
     <MESSAGE value="微博模型数据迁移" />
     <MESSAGE value="微博登陆实现" />
     <MESSAGE value="展示商品评价页面" />
@@ -1132,7 +1111,8 @@
     <MESSAGE value="权限-管理-获取权限数据" />
     <MESSAGE value="组-查询" />
     <MESSAGE value="组-权限选择数据(简单查询)" />
-    <option name="LAST_COMMIT_MESSAGE" value="组-权限选择数据(简单查询)" />
+    <MESSAGE value="组-获取管理员用户列表数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="组-获取管理员用户列表数据" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1141,20 +1121,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.virtualenvs/django_29/lib/python3.5/site-packages/rest_framework/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="917" column="63" lean-forward="true" selection-start-line="917" selection-start-column="63" selection-end-line="917" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/utils/authenticate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-407">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/18ecd171/44f649c5-0587-4717-81ca-504de481ac62/meiduo.tb_users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1529,26 +1495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/groups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/groups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/permission.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1579,16 +1525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -1601,6 +1537,52 @@
             <element signature="e#1424#1647#0" expanded="false" />
             <element signature="e#1747#1877#0" expanded="false" />
             <element signature="e#1926#2072#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/django_29/lib/python3.5/site-packages/rest_framework/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3983">
+          <caret line="896" column="28" lean-forward="true" selection-start-line="896" selection-start-column="28" selection-end-line="896" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/serializers/groups.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="60" column="49" lean-forward="false" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/django_29/lib/python3.5/site-packages/rest_framework/generics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343">
+          <caret line="111" column="20" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/meiduo_admin/views/groups.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>

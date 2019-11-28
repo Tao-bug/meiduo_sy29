@@ -59,4 +59,7 @@ router.register('orders', orders.OrderViewSet, base_name='orders')
 
 # 组
 router.register('permission/groups', groups.GroupViewSet, base_name='groups')
+
+# 获取管理员用户列表数据
+router.register('permission/admins', admin.AdminViewSet, base_name='admins')
 urlpatterns += router.urls

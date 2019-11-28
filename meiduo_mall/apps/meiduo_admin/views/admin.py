@@ -1,12 +1,15 @@
 from django.conf import settings
 from django.http import JsonResponse
 from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 from apps.users.models import User
 import jwt
 from datetime import datetime, timedelta
 from apps.meiduo_admin.Mixin import TokenValidateMixin
 from rest_framework_jwt.utils import jwt_payload_handler
+from apps.meiduo_admin.serializers.admin import AdminSerializer
+from apps.meiduo_admin.utils.meiduo_pagination import MeiduoPagination
 
 
 class LoginView(APIView):
@@ -73,3 +76,11 @@ def meiduo_payload_handler(user):
     payload['mobile'] = user.mobile
 
     return payload
+
+
+# 获取管理员用户列表数据
+class AdminViewSet(ModelViewSet):
+    queryset = User.objects.filter(is_staff=True).order_by('-id')
+    serializer_class = AdminSerializer
+    pagination_class = MeiduoPagination
+

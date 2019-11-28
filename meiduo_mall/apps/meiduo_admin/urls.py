@@ -38,6 +38,8 @@ urlpatterns = [
     # url('^orders/(?P<pk>\d+)/status/$',orders.OrderViewSet.as_view({'put':'status'})),
     # 权限
     url('^permission/perms/$', permission.PermissionView.as_view()),
+    # 权限选择数据(简单查询)
+    url('^permission/simple/$', permission.PermissionSimpleView.as_view()),
 
 ]
 

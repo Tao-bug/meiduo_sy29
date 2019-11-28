@@ -21,3 +21,11 @@ class AdminSerializer(serializers.ModelSerializer):
         instance.save()
 
         return instance
+
+    # 重写创建--密码需要加密
+    def update(self, instance, validated_data):
+        instance = super().update(instance, validated_data)
+
+        instance.set_password(validated_data.get('password'))
+        instance.save()
+        return instance

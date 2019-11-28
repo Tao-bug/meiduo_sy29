@@ -1,6 +1,7 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAdminUser, DjangoObjectPermissions
 from apps.orders.models import OrderInfo
 from apps.meiduo_admin.serializers.orders import OrderSerializer, OrderDetailSerializer
 from apps.meiduo_admin.utils.meiduo_pagination import MeiduoPagination
@@ -8,6 +9,8 @@ from apps.meiduo_admin.utils.meiduo_pagination import MeiduoPagination
 
 # 订单
 class OrderViewSet(ReadOnlyModelViewSet):
+    permission_classes = [IsAdminUser, DjangoObjectPermissions]
+
     # queryset = OrderInfo.objects.all()
     def get_queryset(self):
         queryset = OrderInfo.objects

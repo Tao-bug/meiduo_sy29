@@ -34,6 +34,8 @@ urlpatterns = [
     url(r'^goods/(?P<spu_id>\d+)/specs/$', spec.SpecBySpuView.as_view()),
     # 查询所有的sku，返回简单数据，用于添加商品图片时的选择
     url('^skus/simple/$', sku.SkuSimpleView.as_view()),
+    # 为订单修改状态的方法配置路由规则
+    # url('^orders/(?P<pk>\d+)/status/$',orders.OrderViewSet.as_view({'put':'status'})),
 
 ]
 

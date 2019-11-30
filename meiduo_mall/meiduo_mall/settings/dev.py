@@ -190,6 +190,9 @@ STATIC_URL = '/static/'
 # 静态文件的路径
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
+# 指定项目静态文件的采集目录
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
+
 CACHES = {
     # 0
     "default": {  # 默认

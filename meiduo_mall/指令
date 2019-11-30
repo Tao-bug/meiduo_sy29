@@ -12,6 +12,8 @@ sudo docker run -dti --name storage --network=host -e TRACKER_SERVER=172.17.0.1:
 sudo docker images
 sudo docker container ls -a
 sudo docker container start 94c7e733a3c5
+sudo docker container stop storage tracker
+
 
 MySQL主从同步
 主
@@ -40,4 +42,11 @@ npm run dev
 # 推送
 git push origin heima
 
+# nginx
+
+查看：sudo netstat -tnulp | grep nginx
+启动：sudo nginx
+停止：sudo nginx -s stop
+平滑重启：sudo nginx -s reload
+查看版本：nginx -V
 

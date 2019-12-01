@@ -81,13 +81,14 @@ class MonthView(APIView):
 
         # for i in range(29, -1, -1):
         for i in range(29):
+
             date_begin = today - timedelta(days=29 - i)
             date_end = date_begin + timedelta(days=1)
             #
             count = User.objects.filter(is_staff=False, date_joined__gte=date_begin, date_joined__lt=date_end).count()
             count_list.append({
                 'count': count,
-                'date': today
+                'date': date_begin
             })
 
         return Response(count_list)

@@ -50,3 +50,7 @@ git push origin heima
 平滑重启：sudo nginx -s reload
 查看版本：nginx -V
 
+控制uwsgi的命令
+启动：uwsgi --ini uwsgi.ini
+关闭：uwsgi --stop logs/uwsgi.pid
+

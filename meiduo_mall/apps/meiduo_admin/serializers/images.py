@@ -6,3 +6,4 @@ class ImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = SKUImage
         fields = ['id', 'sku', 'image']
+

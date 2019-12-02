@@ -1,3 +1,7 @@
+import json
+
+from django.http import JsonResponse
+from django.views import View
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
@@ -69,6 +73,7 @@ class ImageViewSet(ModelViewSet):
             'image': instance.image.url
         })
 
+    # 删除fastdfs中的图片
     def destroy(self, request, *args, **kwargs):
         instance = SKUImage.objects.get(pk=self.kwargs.get('pk'))
 
@@ -78,3 +83,22 @@ class ImageViewSet(ModelViewSet):
 
         instance.delete()
         return Response(status=204)
+
+
+# spu上传图片
+class SpuImageView(View):
+    # 上传图片
+    def post(self, request):
+        # 接受图片数据
+        image_file = request.FILES.get('image')
+        # image_file = json_dict.get('image')  # 图片文件对象
+        # 验证
+        if not all([image_file]):
+            return serializers.ValidationError('数据不完全')
+        # 处理
+        # 上传图片
+        client = Fdfs_client(settings.FDFS_CLIENT_CONF)
+        result = client.upload_by_buffer(image_file.read())
+        image_url = result.get('Remote file_id')
+
+        return JsonResponse({'img_url': settings.FDFS_BASE_URL+image_url})

@@ -22,9 +22,10 @@ class CategoryView(ListAPIView):
     serializer_class = CategorySerializer
 
     def get_queryset(self):
-        queryset = GoodsCategory.objects
-        pk = self.kwargs.get('pk')
-        if pk:
-            # 第二级分类
-            queryset = queryset.filter(parent_id=pk)
-        return queryset
+        return GoodsCategory.objects.filter(parent_id=self.kwargs.get('pk'))
+        # queryset = GoodsCategory.objects
+        # pk = self.kwargs.get('pk')
+        # if pk:
+        #     # 第二级分类
+        #     queryset = queryset.filter(parent_id=pk)
+        # return queryset

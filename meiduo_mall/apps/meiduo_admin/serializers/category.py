@@ -13,7 +13,7 @@ class Category1Serializer(serializers.Serializer):
     name = serializers.CharField()
 
 
-# 获取三级分类
+# 获取二、三级分类
 class CategorySerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField()

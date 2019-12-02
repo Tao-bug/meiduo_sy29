@@ -43,7 +43,7 @@ npm run dev
 git push origin heima
 
 # nginx
-
+配置文件：/etc/nginx/nginx.conf
 查看：sudo netstat -tnulp | grep nginx
 启动：sudo nginx
 停止：sudo nginx -s stop

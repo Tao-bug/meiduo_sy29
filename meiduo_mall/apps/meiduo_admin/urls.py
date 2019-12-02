@@ -40,6 +40,8 @@ urlpatterns = [
     url('^permission/perms/$', permission.PermissionView.as_view()),
     # 权限选择数据(简单查询)
     url('^permission/simple/$', permission.PermissionSimpleView.as_view()),
+    # 简单品牌信息
+    url('^goods/brands/simple/$', spu.BrandsSimpleView.as_view()),
 
 ]
 
@@ -62,4 +64,7 @@ router.register('permission/groups', groups.GroupViewSet, base_name='groups')
 
 # 获取管理员用户列表数据
 router.register('permission/admins', admin.AdminViewSet, base_name='admins')
+
+# 查询获取SPU表列表数据
+router.register('goods', spu.SpuViewSet, base_name='goods')
 urlpatterns += router.urls

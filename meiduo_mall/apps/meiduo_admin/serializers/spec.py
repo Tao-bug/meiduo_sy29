@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from apps.goods.models import SPUSpecification
+from apps.goods.models import SPUSpecification, SpecificationOption
 
 
 # 商品规格管理
@@ -29,3 +29,22 @@ class SpecBySpuSerializer(serializers.Serializer):
     spu_id = serializers.IntegerField()
     # 规格与选项为1对多关系，在选项中定义了规格外键，通过参数related_name指定options
     options = OptionRelatedSerialiazer(many=True, read_only=True)
+
+
+# 规格选项表管理
+# 查询获取规格选项表列表数据
+class SpecOptionSerializer(serializers.ModelSerializer):
+    spec = serializers.StringRelatedField()
+    spec_id = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = SpecificationOption
+        fields = '__all__'
+        read_only_fields = ['id']
+
+
+# 下拉菜单获取品牌信息
+class SpecSimpleSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
+    name = serializers.CharField()
+

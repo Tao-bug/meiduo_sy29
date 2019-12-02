@@ -48,6 +48,8 @@ urlpatterns = [
     url('^goods/channel/categories/(?P<pk>\d+)/$', category.CategoryView.as_view()),
     # spu上传图片
     url('^goods/images/$', images.SpuImageView.as_view()),
+    # 下拉菜单获取品牌信息
+    url('^goods/specs/simple/$', spec.SpecSimpleView.as_view()),
 
 
 ]
@@ -74,4 +76,7 @@ router.register('permission/admins', admin.AdminViewSet, base_name='admins')
 
 # 查询获取SPU表列表数据
 router.register('goods', spu.SpuViewSet, base_name='goods')
+
+# 规格选项表管理
+router.register('specs/options', spec.SpecOptionViewSet, base_name='options')
 urlpatterns += router.urls

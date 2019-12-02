@@ -1,7 +1,8 @@
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.generics import ListAPIView
-from apps.goods.models import SPUSpecification
-from apps.meiduo_admin.serializers.spec import SpecSerializer, SpecBySpuSerializer
+from rest_framework.response import Response
+from apps.goods.models import SPUSpecification, SpecificationOption
+from apps.meiduo_admin.serializers.spec import SpecSerializer, SpecBySpuSerializer, SpecOptionSerializer, SpecSimpleSerializer
 from apps.meiduo_admin.utils.meiduo_pagination import MeiduoPagination
 from rest_framework.permissions import IsAdminUser, DjangoObjectPermissions
 
@@ -25,3 +26,17 @@ class SpecBySpuView(ListAPIView):
     def get_queryset(self):
         # 视图对象的属性kwargs表示从路径中提取的关键字参数
         return SPUSpecification.objects.filter(spu_id=self.kwargs.get('spu_id'))
+
+
+# 规格选项表管理
+# 查询获取规格选项表列表数据
+class SpecOptionViewSet(ModelViewSet):
+    queryset = SpecificationOption.objects.order_by('-id')
+    serializer_class = SpecOptionSerializer
+    pagination_class = MeiduoPagination
+
+
+# 下拉菜单获取品牌信息
+class SpecSimpleView(ListAPIView):
+    queryset = SPUSpecification.objects.all()
+    serializer_class = SpecSimpleSerializer

@@ -42,6 +42,9 @@ urlpatterns = [
     url('^permission/simple/$', permission.PermissionSimpleView.as_view()),
     # 简单品牌信息
     url('^goods/brands/simple/$', spu.BrandsSimpleView.as_view()),
+    # 获取一级分类信息
+    url('^goods/channel/categories/$', category.Category1View.as_view()),
+
 
 ]
 

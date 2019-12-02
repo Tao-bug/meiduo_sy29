@@ -44,6 +44,8 @@ urlpatterns = [
     url('^goods/brands/simple/$', spu.BrandsSimpleView.as_view()),
     # 获取一级分类信息
     url('^goods/channel/categories/$', category.Category1View.as_view()),
+    # 获取二、三级分类信息
+    url('^goods/channel/categories/(?P<pk>\d+)/$', category.CategoryView.as_view()),
 
 
 ]

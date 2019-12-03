@@ -64,7 +64,8 @@ git push origin heima
 美多django:www.meiduo.site
 
 ------------------  开发  -------------------------
-constant.js 内改地址
+...admin/src/component/constant.js 内改地址
+static/js/host.js  内改地址-----影响提交订单
 ~/Desktop/meiduo_sy29/meiduo_mall_admin$ npm run dev
 ~/Desktop/meiduo_sy29/meiduo_mall$ ...runserver
 

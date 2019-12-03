@@ -32,6 +32,9 @@ class SpuViewSet(ModelViewSet):
     pagination_class = MeiduoPagination
 
     # 保存SPU数据
+    # def create(self, request, *args, **kwargs):
+    #
+    #     return
 
 
 # 简单品牌信息

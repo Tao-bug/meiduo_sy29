@@ -10,17 +10,20 @@ class SpuSimpleSerializer(serializers.ModelSerializer):
 
 # 查询获取SPU表列表数据
 class SpuSerializer(serializers.ModelSerializer):
-    # brand = serializers.StringRelatedField()
+    brand = serializers.StringRelatedField(read_only=True)
     id = serializers.IntegerField(read_only=True)
     brand_id = serializers.IntegerField()
     category1_id = serializers.IntegerField()
     category2_id = serializers.IntegerField()
     category3_id = serializers.IntegerField()
+    # category1 = serializers.CharField(read_only=True)
+    # category2 = serializers.CharField(read_only=True)
+    # category3 = serializers.CharField(read_only=True)
 
     class Meta:
         model = SPU
         # fields = '__all__'
-        exclude = ['category1', 'category2', 'category3', 'brand']
+        exclude = ['category1', 'category2', 'category3']
 
 
 # 简单品牌信息

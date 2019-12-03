@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
-from .views import statistical, user, spec, spu, sku, category, images, orders, permission, groups
+from .views import statistical, user, spec, spu, sku, category, images, orders, permission, groups, brands
 from rest_framework.routers import SimpleRouter
 from .views import admin
 
@@ -33,23 +33,23 @@ urlpatterns = [
     # 根据spu查询spec的路由goods/1/specs/
     url(r'^goods/(?P<spu_id>\d+)/specs/$', spec.SpecBySpuView.as_view()),
     # 查询所有的sku，返回简单数据，用于添加商品图片时的选择
-    url('^skus/simple/$', sku.SkuSimpleView.as_view()),
+    url(r'^skus/simple/$', sku.SkuSimpleView.as_view()),
     # 为订单修改状态的方法配置路由规则
     # url('^orders/(?P<pk>\d+)/status/$',orders.OrderViewSet.as_view({'put':'status'})),
     # 权限
-    url('^permission/perms/$', permission.PermissionView.as_view()),
+    url(r'^permission/perms/$', permission.PermissionView.as_view()),
     # 权限选择数据(简单查询)
-    url('^permission/simple/$', permission.PermissionSimpleView.as_view()),
+    url(r'^permission/simple/$', permission.PermissionSimpleView.as_view()),
     # 简单品牌信息
-    url('^goods/brands/simple/$', spu.BrandsSimpleView.as_view()),
+    url(r'^goods/brands/simple/$', spu.BrandsSimpleView.as_view()),
     # 获取一级分类信息
-    url('^goods/channel/categories/$', category.Category1View.as_view()),
+    url(r'^goods/channel/categories/$', category.Category1View.as_view()),
     # 获取二、三级分类信息
-    url('^goods/channel/categories/(?P<pk>\d+)/$', category.CategoryView.as_view()),
+    url(r'^goods/channel/categories/(?P<pk>\d+)/$', category.CategoryView.as_view()),
     # spu上传图片
-    url('^goods/images/$', images.SpuImageView.as_view()),
+    url(r'^goods/images/$', images.SpuImageView.as_view()),
     # 下拉菜单获取品牌信息
-    url('^goods/specs/simple/$', spec.SpecSimpleView.as_view()),
+    url(r'^goods/specs/simple/$', spec.SpecSimpleView.as_view()),
 
 
 ]
@@ -74,9 +74,15 @@ router.register('permission/groups', groups.GroupViewSet, base_name='groups')
 # 获取管理员用户列表数据
 router.register('permission/admins', admin.AdminViewSet, base_name='admins')
 
+# 品牌表管理
+# 注意：必须写在goods路由规则的上面
+router.register('goods/brands', brands.BrandViewSet, base_name='brands')
+
 # 查询获取SPU表列表数据
 router.register('goods', spu.SpuViewSet, base_name='goods')
 
 # 规格选项表管理
 router.register('specs/options', spec.SpecOptionViewSet, base_name='options')
+
+
 urlpatterns += router.urls

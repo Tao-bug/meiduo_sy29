@@ -35,7 +35,7 @@ class SpecBySpuSerializer(serializers.Serializer):
 # 查询获取规格选项表列表数据
 class SpecOptionSerializer(serializers.ModelSerializer):
     spec = serializers.StringRelatedField()
-    spec_id = serializers.IntegerField(read_only=True)
+    spec_id = serializers.IntegerField()
 
     class Meta:
         model = SpecificationOption

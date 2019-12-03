@@ -37,11 +37,52 @@ class BrandViewSet(ModelViewSet):
         return Response({
             'id': instance.id,
             'name': instance.name,
-            'logo': instance.logo,
+            'logo': instance.logo.url,
             'first_letter': instance.first_letter
         })
 
-    #
+    # 重写修改方法，原因：默认代码只有修改对象的功能，不包含上传图片的功能
     def update(self, request, *args, **kwargs):
+        instance = Brand.objects.get(pk=self.kwargs.get('pk'))
+        # 接收
+        name = request.data.get('name')
+        logo_file = request.data.get('logo')
+        first_letter = request.data.get('first_letter')
 
-        return
+        # 校验
+        if not all([name, first_letter, logo_file]):
+            return serializers.ValidationError('数据不完全')
+
+        # 处理图片
+        client = Fdfs_client(settings.FDFS_CLIENT_CONF)
+        # 删除原有图片
+        client.delete_file(instance.logo.name)
+        # 上传图片
+        result = client.upload_by_buffer(logo_file.read())
+        logo_name = result.get('Remote file_id')
+        # 修改模型类对象   保存对象
+        instance.name = name
+        instance.first_letter = first_letter
+        instance.logo = logo_name
+        instance.save()
+
+        # 响应
+        return Response({
+            'id': instance.id,
+            'name': instance.name,
+            'logo': instance.logo.url,
+            'first_letter': instance.first_letter
+        })
+
+    # 删除fastdfs中的图片
+    def destroy(self, request, *args, **kwargs):
+        instance = Brand.objects.get(pk=self.kwargs.get('pk'))
+
+        # 删除图片
+        client = Fdfs_client(settings.FDFS_CLIENT_CONF)
+        client.delete_file(instance.logo.name)
+
+        # 删除模型类
+        instance.delete()
+
+        return Response(status=204)

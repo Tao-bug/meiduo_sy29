@@ -84,5 +84,4 @@ router.register('goods', spu.SpuViewSet, base_name='goods')
 # 规格选项表管理
 router.register('specs/options', spec.SpecOptionViewSet, base_name='options')
 
-
 urlpatterns += router.urls

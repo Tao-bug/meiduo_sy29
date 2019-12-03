@@ -359,6 +359,7 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:8080',
     'http://www.meiduo.site:8080',
     'http://admin.meiduo.site:81',
+    'http://127.0.0.1:81',
 )
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 

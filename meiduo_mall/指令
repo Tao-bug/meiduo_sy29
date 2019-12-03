@@ -42,7 +42,7 @@ npm run dev
 # 推送
 git push origin heima
 
-# nginx
+# nginx  ---  美多后台
 配置文件：/etc/nginx/nginx.conf
 查看：sudo netstat -tnulp | grep nginx
 启动：sudo nginx
@@ -50,7 +50,29 @@ git push origin heima
 平滑重启：sudo nginx -s reload
 查看版本：nginx -V
 
-控制uwsgi的命令
+控制uwsgi的命令  ----   美多django
 启动：uwsgi --ini uwsgi.ini
 关闭：uwsgi --stop logs/uwsgi.pid
+
+# dev
+美多后台：127.0.0.1:8080
+美多django后台：http://www.meiduo.site:8000  ----》改为django自带
+美多django:www.meiduo.site:8000 ----》改为jinja2
+
+# prod
+美多后台：127.0.0.1:81
+美多django:www.meiduo.site
+
+------------------  开发  -------------------------
+constant.js 内改地址
+~/Desktop/meiduo_sy29/meiduo_mall_admin$ npm run dev
+~/Desktop/meiduo_sy29/meiduo_mall$ ...runserver
+
+------------------  上线  --------------------------
+前端文件整合
+~/Desktop/meiduo_sy29/meiduo_mall_admin$ npm run build
+启动 sudo nginx  ----  重启：sudo nginx -s reload
+启动 uwsgi --ini uwsgi.ini
+注意：ps aux | grep uwsgi
+     sudo kill -9
 

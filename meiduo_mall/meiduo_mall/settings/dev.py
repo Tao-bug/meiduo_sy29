@@ -69,27 +69,10 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'meiduo_mall.urls'
 
 # 在drf在中，模板使用django编写，所以需要禁用jinja2
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
-
-# 前端使用jinja2模板
 # TEMPLATES = [
 #     {
-#         'BACKEND': 'django.template.backends.jinja2.Jinja2',  # 1.jinja2模板引擎
-#         'DIRS': [os.path.join(BASE_DIR, 'templates')],  # 2.模本文件夹路径
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [],
 #         'APP_DIRS': True,
 #         'OPTIONS': {
 #             'context_processors': [
@@ -98,11 +81,28 @@ TEMPLATES = [
 #                 'django.contrib.auth.context_processors.auth',
 #                 'django.contrib.messages.context_processors.messages',
 #             ],
-#             # 3.加载Jinja2模板引擎环境
-#             'environment': 'utils.jinja2_env.jinja2_environment',
 #         },
 #     },
 # ]
+
+# 前端使用jinja2模板
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',  # 1.jinja2模板引擎
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # 2.模本文件夹路径
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+            # 3.加载Jinja2模板引擎环境
+            'environment': 'utils.jinja2_env.jinja2_environment',
+        },
+    },
+]
 
 WSGI_APPLICATION = 'meiduo_mall.wsgi.application'
 
@@ -352,6 +352,7 @@ CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'
 # CORS 添加白名单
 CORS_ORIGIN_WHITELIST = (
     'http://127.0.0.1:8080',
+    'http://127.0.0.1:81',
     'http://localhost:8080',
     'http://www.meiduo.site:8080',
     'http://api.meiduo.site:8000',
